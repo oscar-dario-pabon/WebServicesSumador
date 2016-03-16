@@ -47,7 +47,7 @@ public class Servlet extends HttpServlet {
             String b = request.getParameter("parametro_b");
             URL baseUrl;
             baseUrl = com.senneko.ws.client.SumaPort_Service.class.getResource(".");
-            URL url = new URL(baseUrl, "http://45.55.155.159:8080/WSSuma-1.0.0/SumaPort?wsdl");
+            URL url = new URL(baseUrl, "http://localhost:8090/WebServicesSumador/SumaPort?wsdl");
             service = new SumaPort_Service(url, new QName("http://main.ws.senneko.com/", "SumaPort"));
             SumaPort port = service.getSumaPortPort();
             int parametroA = new Integer(a);
